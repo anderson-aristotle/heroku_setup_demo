@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   post '/sign-in' => 'users#signin'
   delete '/sign-out' => 'users#signout'
   patch '/change-password' => 'users#changepw'
+
+# Books resource routes
+# router has request to GET /books - index action is performed for all GET requests
+  get '/books' => 'books#index'
 end
