@@ -13,4 +13,11 @@ Rails.application.routes.draw do
 # Books resource routes
 # router has request to GET /books - index action is performed for all GET requests
   get '/books' => 'books#index'
+
+  # Patients resourse routes
+  get '/patients' => 'patients#index'
+
+
+  # Ingredients respurce routes
+  get '/ingredients' => 'ingredients#index'
 end
