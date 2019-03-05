@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :recipes, except: %i[new edit]
   # RESTful routes
   resources :examples, except: %i[new edit]
 
@@ -14,11 +15,11 @@ Rails.application.routes.draw do
 # router has request to GET /books - index action is performed for all GET requests
   get '/books' => 'books#index'
   get '/books/:id' => 'books#show'
-  post '/books' => 'books#index
+  post '/books' => 'books#index'
 
-# patient routes
-resources :patients, except: %i[new edit]
-  # get '/patients' => 'patient#index'
+#patient routes
+  resources :patients, except: %i[new edit]
+  # get '/patients' => 'patients#index'
   # get '/patients' => 'patients#post'
   # post '/patients' => 'patients#create'
   # patch '/patients/:id' => 'patients#update'
